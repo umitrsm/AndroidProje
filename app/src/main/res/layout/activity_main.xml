@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/colorPrimary"
+    >
+    <include layout="@layout/activity_appbar"
+        android:id="@+id/action_bar_Register"/>
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="140dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="44dp"
+        android:text="Tarih Seçiniz"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/calen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <CalendarView
+        android:id="@+id/calen"
+        android:layout_width="304dp"
+        android:layout_height="297dp"
+        android:background="@drawable/bg_calend"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.433"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.581">
+
+    </CalendarView>
+</androidx.constraintlayout.widget.ConstraintLayout>

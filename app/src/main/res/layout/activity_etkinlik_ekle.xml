@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EtkinlikEkleActivity">
+
+    <TextView
+        android:id="@+id/adi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:text="Etkinlik Adı:"
+        android:textSize="15sp"
+
+        />
+    <EditText
+        android:id="@+id/isim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/adi"
+        android:textSize="15sp"
+        android:lines="1"
+        android:layout_gravity="top|start"/>
+    <TextView
+        android:id="@+id/detay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:text="Etkinlik Detayı:"
+
+        />
+    <EditText
+        android:id="@+id/detayi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/detay"
+        android:textSize="15sp"
+        android:lines="1"
+        android:layout_gravity="top|start"/>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+   android:id="@+id/baslangicsa"
+    android:layout_marginLeft="165dp"
+    android:text="Seçilmedi"
+    />
+    <Button
+        android:id="@+id/baslangic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Başlangıç Saati"
+        android:layout_marginLeft="110dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bitissa"
+        android:layout_marginLeft="165dp"
+        android:text="Seçilmedi"
+        />
+    <Button
+        android:id="@+id/bitis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="        Bitiş Saati     "
+        android:layout_marginLeft="110dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hatirlatsa"
+        android:layout_marginLeft="165dp"
+        android:text="Seçilmedi"
+        />
+    <Button
+        android:id="@+id/hatirlat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Hatırlatma Saati "
+        android:layout_marginLeft="110dp"
+        />
+    <TextView
+        android:id="@+id/adres"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:text="Adres:"
+        android:textSize="15sp"
+
+        />
+    <EditText
+        android:id="@+id/adresi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/adres"
+        android:textSize="15sp"
+        android:lines="1"
+        android:layout_gravity="top|start"/>
+    <TextView
+        android:id="@+id/hatir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:text="Hatırlatma Sıklığı:"
+        android:textSize="15sp"
+
+        />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+       <CheckBox
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Günlük"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Haftalık"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aylık"/>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/ekle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Etkinlik Ekle "
+        android:layout_marginLeft="110dp"
+        />
+</LinearLayout>
