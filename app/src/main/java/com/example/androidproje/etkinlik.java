@@ -11,7 +11,7 @@ public class etkinlik {
     String bassa;
     String bitsa;
     String hatsa;
-    Hatirlatma hatirlama;
+    String hatirlama;
     String adres;
 
     public String getTarih() {
@@ -61,11 +61,11 @@ public class etkinlik {
         this.hatsa = hatsa;
     }
 
-    public Hatirlatma getHatirlama() {
+    public String getHatirlama() {
         return hatirlama;
     }
 
-    public void setHatirlama(Hatirlatma hatirlama) {
+    public void setHatirlama(String hatirlama) {
         this.hatirlama = hatirlama;
     }
 
