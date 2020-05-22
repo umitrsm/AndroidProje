@@ -3,6 +3,9 @@ enum Hatirlatma {
     gunluk,haftalik,aylik;
         }
 public class etkinlik {
+
+
+    String tarih;
     String ad;
     String detay;
     String bassa;
@@ -11,6 +14,13 @@ public class etkinlik {
     Hatirlatma hatirlama;
     String adres;
 
+    public String getTarih() {
+        return tarih;
+    }
+
+    public void setTarih(String tarih) {
+        this.tarih = tarih;
+    }
     public String getAd() {
         return ad;
     }
