@@ -13,7 +13,7 @@ public class sqlite_katman extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql = "create table etkinlik(tarih text primary key,ad text,detay text,bassa text,bitsa text,hatsa text,hatirlama text,adres text)";
+        String sql = "create table etkinlik(id integer primary key autoincrement  , tarih text,ad text,detay text,bassa text,bitsa text,hatsa text,hatirlama text,adres text)";
         db.execSQL(sql);
     }
 

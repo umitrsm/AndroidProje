@@ -20,15 +20,15 @@ public class veriKaynagi {
     public void kapat(){
         bdb.close();
                     }
-    public void etkinlikOlustur(String isim,String detay,String bassa,String bitsa,String hatsa,String hatirlatma,String adres){
-        etkinlik e = new etkinlik();
-        e.setAd(isim);
-        e.setDetay(detay);
-        e.setBassa(bassa);
-        e.setBitsa(bitsa);
-        e.setHatsa(hatsa);
-        e.setHatirlama(hatirlatma);
-        e.setAdres(adres);
+    public void etkinlikOlustur(etkinlik e){
+      //  etkinlik e = new etkinlik();
+      //  e.setAd(isim);
+      //  e.setDetay(detay);
+      //  e.setBassa(bassa);
+      //  e.setBitsa(bitsa);
+     //   e.setHatsa(hatsa);
+      //  e.setHatirlama(hatirlatma);
+     //   e.setAdres(adres);
         ContentValues val = new ContentValues();
         val.put("ad",e.getAd());
         val.put("detay",e.getDetay());
@@ -45,13 +45,14 @@ public class veriKaynagi {
         Cursor c = db.query("etkinlik",kolon,null,null,null,null,null);
         c.moveToFirst();
         while (!c.isAfterLast()){
-            String isim = c.getString(0);
-            String detay = c.getString(1);
-            String bassa =  c.getString(2);
-            String bitsa = c.getString(3);
-            String hatsa = c.getString(4);
-            String hatirlatma = c.getString(5);
-            String adres = c.getString(6);
+            int id = c.getInt(0);
+            String isim = c.getString(1);
+            String detay = c.getString(2);
+            String bassa =  c.getString(3);
+            String bitsa = c.getString(4);
+            String hatsa = c.getString(5);
+            String hatirlatma = c.getString(6);
+            String adres = c.getString(7);
             etkinlik e = new etkinlik();
             e.setAd(isim);
             e.setDetay(detay);
@@ -62,7 +63,11 @@ public class veriKaynagi {
             e.setAdres(adres);
             etkinliks.add(e);
         }
-        return etkinliks; 
+        return etkinliks;
+    }
+    public void etkinlikSil(etkinlik e){
+    int id = e.getId();
+    db.delete("etkinlik","id="+id,null);
     }
 }
 

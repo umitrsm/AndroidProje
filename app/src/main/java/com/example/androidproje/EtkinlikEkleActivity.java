@@ -15,14 +15,20 @@ import android.widget.TimePicker;
 import java.util.Calendar;
 
 public class EtkinlikEkleActivity extends AppCompatActivity  {
-    Button bitis,bas,hatirlat;
+    Button bitis,bas,hatirlat,ekle;
     Context context = this;
     TextView bitissa,bassa,hatirlatsa;
+    EditText ad,detay,adres;
+    String nisim,ntarih,nbassa,nbitsa,nhatsa,nhatirlatma,nadres,ndetay;
+    veriKaynagi vk = new veriKaynagi(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_etkinlik_ekle);
-
+        adres = (EditText) findViewById(R.id.adresi);
+        ad = (EditText) findViewById(R.id.isim);
+        detay = (EditText) findViewById(R.id.detayi);
+        ekle = (Button) findViewById(R.id.ekle);
         bas = (Button) findViewById(R.id.baslangic);
         bitis = (Button) findViewById(R.id.bitis);
         hatirlat = (Button) findViewById(R.id.hatirlat);
@@ -92,7 +98,18 @@ public class EtkinlikEkleActivity extends AppCompatActivity  {
                 tpd.show();
             }
         });
-
+    ekle.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+        etkinlik e = new etkinlik();
+        e.setAd(ad.getText().toString());
+        e.setDetay(detay.getText().toString());
+        e.setBassa(bassa.getText().toString());
+        e.setBitsa(bitissa.getText().toString());
+        e.setAdres(adres.getText().toString());
+        vk.etkinlikOlustur(e);
+        }
+    });
     }
 
 }

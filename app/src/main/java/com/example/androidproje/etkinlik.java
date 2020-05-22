@@ -4,7 +4,15 @@ enum Hatirlatma {
         }
 public class etkinlik {
 
+    public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    int id;
     String tarih;
     String ad;
     String detay;
@@ -13,6 +21,29 @@ public class etkinlik {
     String hatsa;
     String hatirlama;
     String adres;
+
+    public etkinlik(int id, String tarih, String ad, String detay, String bassa, String bitsa, String hatsa, String hatirlama, String adres) {
+        this.id = id;
+        this.tarih = tarih;
+        this.ad = ad;
+        this.detay = detay;
+        this.bassa = bassa;
+        this.bitsa = bitsa;
+        this.hatsa = hatsa;
+        this.hatirlama = hatirlama;
+        this.adres = adres;
+    }
+
+    public etkinlik() {
+    }
+
+    public etkinlik(int id, String ad) {
+        this.id = id;
+        this.ad = ad;
+    }
+    public String toString(){
+        return ""+id+"  "+ad;
+    }
 
     public String getTarih() {
         return tarih;
