@@ -19,7 +19,7 @@ public class EtkinlikEkleActivity extends AppCompatActivity  {
     Context context = this;
     TextView bitissa,bassa,hatirlatsa;
     EditText ad,detay,adres;
-    String nisim,ntarih,nbassa,nbitsa,nhatsa,nhatirlatma,nadres,ndetay;
+  //  String nisim,ntarih,nbassa,nbitsa,nhatsa,nhatirlatma,nadres,ndetay;
     veriKaynagi vk = new veriKaynagi(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {

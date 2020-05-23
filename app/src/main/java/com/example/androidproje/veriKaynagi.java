@@ -29,6 +29,7 @@ public class veriKaynagi {
      //   e.setHatsa(hatsa);
       //  e.setHatirlama(hatirlatma);
      //   e.setAdres(adres);
+
         ContentValues val = new ContentValues();
         val.put("ad",e.getAd());
         val.put("detay",e.getDetay());
@@ -37,7 +38,7 @@ public class veriKaynagi {
         val.put("hatsa",e.getHatsa());
         val.put("hatirlatma",e.getHatirlama());
         val.put("adres",e.getAdres());
-        db.insert("etkinlik",null,val);
+       db.insert("etkinlik",null,val);
     }
     public List<etkinlik> listele(){
         List<etkinlik> etkinliks = new ArrayList<etkinlik>();
