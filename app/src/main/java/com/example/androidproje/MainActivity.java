@@ -38,7 +38,10 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
+      /*  switch (item.getItemId()){
+            case R.id.ekle:
+                Intent ekle = new Intent(MainActivity.this, EtkinlikEkleActivity.class);
+                startActivity(ekle);
             case R.id.ayar:
                 Intent ayar = new Intent(MainActivity.this, AyarlarActivity.class);
                 startActivity(ayar);
@@ -46,10 +49,21 @@ public class MainActivity extends AppCompatActivity {
             case R.id.etkinlik:
                 Intent etkinlik = new Intent(MainActivity.this, EtkinlikActivity.class);
                 startActivity(etkinlik);
-            case R.id.ekle:
-                Intent ekle = new Intent(MainActivity.this, EtkinlikEkleActivity.class);
-                startActivity(ekle);
+
+        }
+        return super.onOptionsItemSelected(item);
+    }*/
+        if (item.getItemId() == R.id.ekle) {
+            Intent ekle = new Intent(MainActivity.this, EtkinlikEkleActivity.class);
+            startActivity(ekle);
+        } else if (item.getItemId() == R.id.ayar) {
+            Intent ayar = new Intent(MainActivity.this, AyarlarActivity.class);
+            startActivity(ayar);
+        } else if (item.getItemId() == R.id.etkinlik) {
+            Intent etkinlik = new Intent(MainActivity.this, EtkinlikActivity.class);
+            startActivity(etkinlik);
         }
         return super.onOptionsItemSelected(item);
     }
+
 }
